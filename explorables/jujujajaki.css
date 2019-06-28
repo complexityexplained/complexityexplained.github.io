@@ -1,0 +1,19 @@
+
+
+.node {
+	fill:rgb(180,180,180);
+	stroke:black;
+	stroke-width: 0.5px;
+}
+
+.alone {
+	fill:white;
+}
+
+
+.edge {
+	stroke:black;
+	stroke-width:.5px;
+
+}
+
