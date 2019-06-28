@@ -1,7 +1,537 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Re-adapted by Manlio De Domenico from Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<body>
-<h1>Complexity Explained</h1>
-<p>Future home of the Complexity Explained project. Test.</p>
-</body>
+	<head>
+		<title>Complexity Explained</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="Manlio De Domenico" />
+
+		<!-- This css is required by explorables but i need to put it here for comaptibility with the header of the template -->
+		<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- EXPLORABLES -->
+
+		  <link rel="stylesheet" type="text/css" href="explorables/widget.v3.css" />
+		  <link rel="stylesheet" type="text/css" href="explorables/explorables.css" />
+		  <link rel="stylesheet" type="text/css" href="explorables/double-pendulum.css" />
+		  <link rel="stylesheet" type="text/css" href="explorables/jujujajaki.css" />
+
+		  <script type="text/javascript" src="explorables/d3.v4.min.js"></script>
+		  <script type="text/javascript" src="explorables/d3-scale-chromatic.v1.min.js"></script>
+		  <script type="text/javascript" src="explorables/widget.v3.6.js"></script>
+		  <script type="text/javascript" src="explorables/lattice.v3.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>#ComplexityExplained</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Project</a></li>
+						<li><a href="#one">Explore Concepts</a></li>
+						<li><a href="#refs">References</a></li>
+						<li><a href="#booklet">Booklet</a></li>
+						<li><a href="#credits">Credits</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>What is Complexity Science?</h2>
+						&quot;<i>I think the next [21st] century will be the century of complexity</i>&quot; – Stephen Hawking
+					</header>
+					<p>
+						Complexity science, also called complex systems science, studies how a large collection of components – locally interacting with each other at small scales – can spontaneously self-organize to exhibit non-trivial global structures and behaviors at larger scales, often without external intervention, central authorities or leaders. The properties of the collection may not be understood or predicted from the full knowledge of its constituents alone. Such a collection is called a complex system and it requires new mathematical frameworks and scientific methodologies for its investigation.
+					</p>
+					<p>
+						Here are a few things you should know about complex systems,<br> <strong>result of a worldwide collaborative effort from leading experts, practitioners and students in the field</strong>.
+					</p>
+					<p>
+						&quot;<i>There's no love in a carbon atom,</i>
+						<i>No hurricane in a water molecule,</i>
+						<i>No financial collapse in a dollar bill.</i>&quot;<br>
+						<strong>–  Peter Dodds</strong>
+
+					</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Interactions</h2>
+						<h4>Complex systems consist of many components interacting with each other and their environment in multiple ways</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>Every object that biology studies is a system of systems.</i>&quot;– Francois Jacob</p>
+					<p>
+						Complex systems are often characterized by many components that interact in multiple ways among each other and potentially with their environment too. These components form networks of interactions, sometimes with just a few components involved in many interactions. Interactions may generate novel information that make it difficult to study components in isolation or to completely predict their future. In addition, the components of a system can also be whole new systems, leading to systems of systems, being interdependent on one another. The main challenge of complexity science is not only to see the parts and their connections but also to understand how these connections give rise to the whole.<br><br>
+					</p>
+					<p>
+						<strong>Examples</strong>: billions of interacting neurons in the human brain; computers communicating in the Internet; humans in multifaceted relationships. 
+					</p>
+					<p>
+						<strong>Concepts</strong>: system, component, interactions, <a href="http://www.complexity-explorables.org/explorables/giant/">network <i class="fas fa-arrow-circle-right"></i></a>, structure, <a href="http://www.complexity-explorables.org/explorables/networks/">heterogeneity <i class="fas fa-arrow-circle-right"></i></a>, inter-relatedness, inter-connectedness, interdependence, subsystems, boundaries, environment, open/closed systems, systems of systems 
+					</p>
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="jujujajaki_display" class="display-panel"></div>
+	<div id="jujujajaki_controls" class="control-panel"></div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Jujujajaki networks:</div> 
+A dynamic network model that was designed to capture the emergence of community structures, heterogeneities and clusters that are frequently observed in social networks. Clusters are characterized by a high probability that a person's 'friends are also friends'. In this model not only the connectivity evolves but also the strength of links between nodes. The model was orginally proposed by Jussi Kumpula, Jukka-Pekka Onnela, Jari Saramäki, János Kertész and Kimmo Kaski.
+<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a 			href="http://www.complexity-explorables.org/explorables/jujujajaki/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Emergence</h2>
+						<h4>Properties of complex systems as a whole are very different, and often unexpected, from properties of their individual components</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>You don't need something more to get something more. That's what emergence means.</i>&quot;– Murray Gell-Mann</p>
+					<p>
+						In simple systems, the properties of the whole can be understood or predicted from the addition or aggregation of its components. In other words, macroscopic properties of a simple system can be deduced from the microscopic properties of its parts. In complex systems, however, the properties of the whole often cannot be understood or predicted from the knowledge of its components because of a phenomenon known as “emergence.” This phenomenon involves diverse mechanisms causing the interaction between components of a system to generate novel information and exhibit non-trivial collective structures and behaviors at larger scales. This fact is usually summarized with the popular phrase <i>the whole is more than the sum of its parts</i>.<br><br>
+					</p>
+					<p>
+						<strong>Examples</strong>: a massive amount of air and vapor molecules forming a tornado; multiple cells forming a living organism; billions of neurons in a brain producing consciousness and intelligence.
+					</p>
+					<p>
+						<strong>Concepts</strong>: <a href="http://www.complexity-explorables.org/explorables/loyale-with-cheese/">emergence <i class="fas fa-arrow-circle-right"></i></a>, scales, non-linearity, bottom-up, description, surprise, indirect effects, non-intuitiveness, phase transition, non-reducibility, breakdown of traditional linear/statistical thinking, the whole is more than the sum of its parts
+					</p>
+
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	<div id="flocking_display" class="display-panel"></div>
+	<div id="flocking_controls" class="control-panel"></div>  
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Collective motion:</div> 
+		A simple model for collective behavior, swarming and flocking in animals. Individuals move at constant speed and noisy directional changes in a two-dimensional box. Three interactions rules govern the behavior. Individuals avoid collisions, the align with others in their neighborhood and the try to move towards the center of mass of all individuals. As a consequence of these interactions different flocking states emerge.
+		<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a 			href="http://www.complexity-explorables.org/explorables/collective-behavior/">Complexity Explorables</a> 
+		</div>
+	</figcaption>
+  </div>
+</div>
+				</div>
+				<a href="#three" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Dynamics</h2>
+						<h4>Complex systems tend to change their states dynamically, often showing unpredictable long-term behavior</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>Chaos: When the present determines the future, but the approximate present does not approximately determine the future.</i>&quot;– Edward Lorenz</p>
+					<p>
+						Systems can be analyzed in terms of the changes of their states over time. A state is described in sets of variables that best characterize the system. As the system changes its state from one to another, its variables also change, often responding to its environment. This change is called linear if it is directly proportional to time, the system’s current state, or changes in the environment, or non-linear if it is not proportional to them. Complex systems are typically non-linear, changing at different rates depending on their states and their environment. They also may have stable states at which they can stay the same even if perturbed, or unstable states at which the systems can be disrupted by a small perturbation. In some cases, small environmental changes can completely change the system behavior, known as bifurcations, phase transitions, or tipping points. Some systems are chaotic, extremely sensitive to small perturbations and unpredictable in the long run, showing the so-called <i>butterfly effect</i>. A complex system can also be path-dependent, that is, its future state depends not only on its present state, but also on its past history. 
+					</p>	
+					<p>
+						<strong>Examples</strong>: the weather constantly changing in unpredictable ways; financial volatility in the stock market.
+					</p>
+					<p>
+						<strong>Concepts</strong>: <a href="http://www.complexity-explorables.org/explorables/kuramoto/">Dynamics <i class="fas fa-arrow-circle-right"></i></a>, behavior, non-linearity, <a href="http://www.complexity-explorables.org/explorables/double-trouble/">chaos <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/pulse/">non-equilibrium <i class="fas fa-arrow-circle-right"></i></a>, sensitivity, butterfly effect, bifurcation, long-term non-predictability, uncertainty, path/context dependence, <a href="http://www.complexity-explorables.org/explorables/levy/">non-ergodicity <i class="fas fa-arrow-circle-right"></i></a>
+					</p>
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	<div id="double-pendulum_display" class="display-panel"></div>
+	<div id="double-pendulum_controls" class="control-panel"></div>
+	
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">The double pendulum:</div> 
+		One of the most famous dynamical systems that exhibits chaotic behavior and sensitivity to initial conditions. The double pendulum has no friction and exhibits apparently unpredictable movements. Two systems that are initialized almost identically will soon differ substantially in the state as a function of time.
+		<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a	href="http://www.complexity-explorables.org/explorables/double-trouble/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+
+				</div>
+				<a href="#four" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Self-Organization</h2>
+						<h4>Complex systems may self-organize to produce non-trivial patterns spontaneously without a blueprint</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>It is suggested that a system of chemical substances, called morphogens, reacting together and diffusing through a tissue, is adequate to account for the main phenomena of morphogenesis.</i>&quot;– Alan Turing</p>
+					<p>
+						Interactions between components of a complex system may produce a global pattern or behavior. This is often described as self-organization, as there is no central or external controller. Rather, the “control” of a self-organizing system is distributed across components and integrated through their interactions. Self-organization may produce physical/functional structures like crystalline patterns of materials and morphologies of living organisms, or dynamic/informational behaviors like shoaling behaviors of fish and electrical pulses propagating in animal muscles. As the system becomes more organized by this process, new interaction patterns may emerge over time, potentially leading to the production of greater complexity. In some cases, complex systems may self-organize into a “critical” state that could only exist in a subtle balance between randomness and regularity. Patterns that arise in such self-organized critical states often show various peculiar properties, such as self-similarity and heavy-tailed distributions of pattern properties.
+					</p>
+					<p>
+						<strong>Examples</strong>: single egg cell dividing and eventually self-organizing into complex shape of an organism; cities growing as they attract more people and money; a large population of starlings showing complex flocking patterns.
+
+					</p>
+					<p>
+						<strong>Concepts</strong>: <a href="http://www.complexity-explorables.org/explorables/xy-model/">self-organization <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/orlis-flockn-roll/">collective behavior <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/into-the-dark/">swarms <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/grayscott/">patterns <i class="fas fa-arrow-circle-right"></i></a>, space and time, <a href="http://www.complexity-explorables.org/explorables/ising/">order from disorder <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/0.592746/">criticality <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/dla/">self-similarity <i class="fas fa-arrow-circle-right"></i></a>, burst, self-organized criticality, power laws, heavy-tailed distributions, morphogenesis, decentralized/distributed control, guided self-organization
+					</p>
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="forrest_display" class="display-panel"></div>
+	<div id="forrest_controls" class="control-panel"></div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">A Forest Fire Model:</div> 
+	This model is an example of self-organized criticality. The interplay of local tree growth and spontaneous, random forrest fires caused by lightning yield complex spatio-temporal patterns in which the size of individual fires follows a power-law and is scale-free.
+		<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a	href="http://www.complexity-explorables.org/explorables/forrestfire/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+				</div>
+				<a href="#five" class="button style2 down anchored">Next</a>
+			</section>
+
+
+		<!-- Five -->
+			<section id="five" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Adaptation</h2>
+						<h4>Complex systems may adapt and evolve</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>Nothing in biology makes sense except in the light of evolution.</i>&quot;– Theodosius Dobzhansky</p>
+					<p>
+						Rather than just moving towards a steady state, complex systems are often active and responding to the environment -- the difference between a ball that rolls to the bottom of a hill and stops and a bird that adapts to wind currents while flying. This adaptation can happen at multiple scales: cognitive, through learning and psychological development; social, via sharing information through social ties; or even evolutionary, through genetic variation and natural selection. When the components are damaged or removed, these systems are often able to adapt and recover their previous functionality, and sometimes they become even better than before. This can be achieved by robustness, the ability to withstand perturbations; resilience, the ability to go back to the original state after a large perturbation; or adaptation, the ability to change the system itself to remain functional and survive. Complex systems with these properties are known as complex adaptive systems.
+					</p>
+					<p>
+						<strong>Examples</strong>: an immune system continuously learning about pathogens; a colony of termites that repairs damages caused to its mound; terrestrial life that has survived numerous crisis events in billions of years of its history.
+					</p>
+					<p>
+						<strong>Concepts</strong>: learning, adaptation, <a href="http://www.complexity-explorables.org/slides/hexolution/">evolution <i class="fas fa-arrow-circle-right"></i></a>, fitness landscapes, robustness, resilience, <a href="http://www.complexity-explorables.org/explorables/bacteria/">diversity <i class="fas fa-arrow-circle-right"></i></a>, <a href="http://www.complexity-explorables.org/explorables/life/">complex adaptive systems <i class="fas fa-arrow-circle-right"></i></a>, genetic algorithms, artificial life, artificial intelligence, swarm intelligence, creativity, open-endedness
+					</p>
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="herd_display" class="display-panel"></div>
+	<div id="herd_controls" class="control-panel"></div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Epidemics and Herd Immunity:</div> 
+		In this simple epidemic model infected individuals (red) transmit a disease along links of a dynamics network to susceptibles (white). Vaccinated individuals cannot be infected. For a sufficiently high vaccination rate herd immunity kicks in: The disease dies out even thought only a fraction of the population is vaccinated.
+		<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a	href="http://www.complexity-explorables.org/explorables/herd/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+				</div>
+				<a href="#six" class="button style2 down anchored">Next</a>
+			</section>
+
+
+		<!-- Six -->
+			<section id="six" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Interdisciplinarity</h2>
+						<h4>Complexity science can be used to understand and manage a wide variety of systems in many domains</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>It may not be entirely vain, however, to search for common properties among diverse kinds of complex systems... The ideas of feedback and information provide a frame of reference for viewing a wide range of situations.</i>&quot;– Herbert Simon</p>
+					<p>
+						Complex systems appear in all scientific and professional domains, including physics, biology, ecology, social sciences, finance, business, management, politics,  psychology, anthropology, medicine, engineering, information technology, and more. Many of the latest technologies, from social media and mobile technologies to autonomous vehicles and blockchain, produce complex systems with emergent properties that are crucial to understand and predict for societal well-being. A key concept of complexity science is universality, which is the idea that many systems in different domains display phenomena with common underlying features that can be described using the same scientific models. These concepts warrant a new multidisciplinary mathematical/computational framework. Complexity science can provide a comprehensive, cross-disciplinary analytical approach that complements traditional scientific approaches that focus on specific subject matter in each domain.
+					</p>
+					<p>
+						<strong>Examples</strong>: common properties of various information-processing systems (nervous systems, the Internet, communication infrastructure); universal patterns found in various spreading processes (<a href="http://www.complexity-explorables.org/explorables/sirs/">epidemics <i class="fas fa-arrow-circle-right"></i></a>, fads, <a href="http://www.complexity-explorables.org/explorables/forrestfire/">forest fires <i class="fas fa-arrow-circle-right"></i></a>).
+					</p>
+					<p>
+						<strong>Concepts</strong>: universality, various applications, multi-/inter-/cross-/trans- disciplinarity, economy, social systems, ecosystems, sustainability, real-world problem solving, cultural systems, relevance to everyday life decision making
+					</p>
+	<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="grayscott_display" class="display-panel"></div>
+	<div id="grayscott_controls" class="control-panel"></div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Complex Pattern Formation:</div> 
+		Nonlinear reaction diffusion systems can exhibit a variety of complex spatio-temporal systems. This is the Gray-Scott model, a two species autocatalytic system. Depending on the parameter choices this system can exhibit stationary patterns, spation temporal chaos, spiral waves and dynamic patterns reminiscent of biological cell-division. 
+		<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a	href="http://www.complexity-explorables.org/explorables/grayscott/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+
+				</div>
+				<a href="#seven" class="button style2 down anchored">Next</a>
+			</section>
+			
+		<!-- Seven -->
+			<section id="seven" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Methods</h2>
+						<h4>Mathematical and computational methods are powerful tools to study complex systems</h4>
+						<hr>
+					</header>
+					<p>&quot;<i>All models are wrong, but some are useful.</i>&quot;– George Box</p>
+					<p>
+						Complex systems involve many variables and configurations that cannot be explored simply with intuition or paper-and-pencil calculation. Instead, advanced mathematical and computational modeling, analysis and simulations are almost always required to see how these systems are structured and change with time. With the help of computers, we can check if a set of hypothetical rules could lead to a behavior observed in nature, and then use our knowledge of those rules to generate predictions of different “what-if” scenarios. Computers are also used to analyze massive data coming from complex systems to reveal and visualize hidden patterns that are not visible to human eyes. These computational methods can lead to discoveries that then deepen our understanding and appreciation of nature.
+					</p>
+					<p>
+						<strong>Examples</strong>: <a href="http://www.complexity-explorables.org/explorables/orlis-flockn-roll/">agent-based modeling for the flocking of birds  <i class="fas fa-arrow-circle-right"></i></a>; mathematical and computer models of the brain; climate forecasting computer models; computer models of pedestrian dynamics.
+					</p>
+					<p>
+						<strong>Concepts</strong>: Modeling, <a href="http://www.complexity-explorables.org/explorables/traffic/">simulation <i class="fas fa-arrow-circle-right"></i></a>, data analysis, methodology, <a href="http://www.complexity-explorables.org/explorables/herd/">agent-based modeling <i class="fas fa-arrow-circle-right"></i></a>, network analysis, game theory, visualization, rules, understanding
+					</p>
+
+<div class="flex flex-wrap justify-center">
+  <div class=" w-100 w-40-l w-40-m pa3 mr2 tc tr-l tr-m">
+	  	<div id="dla_display" class="display-panel"></div>
+	<div id="dla_controls" class="control-panel"></div>
+  </div>
+  <div class=" w-100 w-40-l w-40-m pa3 mr2">
+	<figcaption class="pa2 ma2 dib fw1 f6"> 
+		<div class="dib fw6">Diffusion Limited Aggregation:</div> 
+		Particles move randomly in space and aggretate by attaching to a solid structure. This emergent structure is a fractal with self-similar branches and sub-branches.
+		<div class="tr mt2 f7">designed by D. Brockmann
+		</div>
+		<div class="tr mt0 f7">adapted from <a	href="http://www.complexity-explorables.org/explorables/dla/">Complexity Explorables</a>
+		</div>
+	</figcaption>
+  </div>
+</div>
+				</div>
+				<a href="#refs" class="button style2 down anchored">Next</a>
+			</section>
+
+
+		<!-- Refs -->
+			<section id="refs" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>References</h2>
+					</header>
+					<p>
+						<ul>
+						<li>- Mitchell, Melanie. Complexity: A Guided Tour. Oxford University Press, 2009.</li>
+
+						<li>- Capra, Fritjof and Luisi, Pier Luigi. The Systems View of Life: A Unifying Vision. Cambridge University Press, 2016.</li>
+
+						<li>- Bar-Yam, Yaneer. Dynamics of Complex Systems. Addison-Wesley, 1997.</li>
+						
+						<li>- Ball, Philip. Critical Mass: How One Thing Leads to Another. Macmillan, 2004.</li>
+
+						<li>- Strogatz, Steven H. Nonlinear Dynamics and Chaos. CRC Press, 1994.</li>
+						
+						<li>- Gleick, James. Chaos: Making a New Science. Open Road Media, 2011.</li>
+
+						<li>- Ball, Philip. The Self-Made Tapestry: Pattern Formation in Nature. Oxford University Press, 1999.</li>
+
+						<li>- Camazine, Scott, et al. Self-Organization in Biological Systems. Princeton University Press, 2003.</li>
+
+						<li>- Holland, John Henry. Adaptation in Natural and Artificial Systems. MIT press, 1992.</li>
+						
+						<li>- Solé, Ricard, and Elena, Santiago F. Viruses as Complex Adaptive Systems. Princeton University Press, 2018.</li>
+
+
+						<li>- Thurner, Stefan, Hanel, Rudolf and Klimek, Peter. Introduction to the Theory of Complex Systems. Oxford University Press, 2018.</li>
+			
+						<li>- Page, Scott E. The Model Thinker. Hachette UK, 2018.</li>
+
+
+						<li>- Pagels, Heinz R. The Dreams of Reason: The Computer and the Rise of the Sciences of Complexity. Bantam Books, 1989.</li>
+
+						<li>- Sayama, Hiroki. Introduction to the Modeling and Analysis of Complex Systems. Open SUNY Textbooks, 2015.</li>
+
+						<li>- Brockmann, Dirk. <a href="http://www.complexity-explorables.org/" target="_blank">Complexity Explorables</a>, 2019.</li>
+
+						</ul>
+					</p>
+				</div>
+				<a href="#booklet" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Download -->
+			<section id="booklet" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>Booklet</h2>
+						<p>
+							You can download a booklet version, for free:
+						</p>
+						<p>
+							<a href="booklet_complexity_explained.pdf">
+							<img src="images/booklet.png" width="50%">
+							<!--<i class="fas fa-file-download fa-2x"></i>-->
+							</a>
+						</p>
+						<p>
+							Design and Graphics by <a href="http://serafinaweb.it/">Serafina Agnello</a>
+						</p>
+						<p>
+							If you use this booklet or its content, please cite it as follows:
+						</p>
+						<p>
+							M. De Domenico, D. Brockmann, C. Camargo, C. Gershenson, D. Goldsmith, S. Jeschonnek, L. Kay, S. Nichele, J.R. Nicolás, T. Schmickl, M. Stella, J. Brandoff, A.J. Martínez Salinas, H. Sayama. Complexity Explained (2019). DOI 10.17605/OSF.IO/TQGNW
+						</p>
+						<p>
+							<i class="fab fa-creative-commons fa-7x"></i><br>
+							This project is released under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> License. <br>
+							You can use it and redistribute it provided that: i) give appropriate credit; ii) not use the material for commercial purposes; iii) if you remix, transform, or build upon the material, you do not distribute the modified material.
+							
+						</p>
+				</div>
+			</section>
+
+		<!-- Credits -->
+			<section id="credits" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>Credits</h2>
+						<p>
+							<strong>Coordinators:</strong><br>
+							Manlio De Domenico and Hiroki Sayama
+						</p>
+						<p>
+							<strong>Contributors:</strong><br>
+
+							Manlio De Domenico, Dirk Brockmann, Chico Camargo, Carlos Gershenson, Daniel Goldsmith, Sabine Jeschonnek, Lorren Kay, Stefano Nichele, José R. Nicolás, Thomas Schmickl, Massimo Stella, Josh Brandoff, Ángel José Martínez Salinas, Hiroki Sayama
+						</p>
+						<p>
+							<strong>Thanks to the following who provided inputs and feedback:</strong><br>
+							Hayford Adjavor, Alex Arenas, Yaneer Bar-Yam, Rogelio Basurto Flores, Michele Battle-Fisher, Anton Bernatskiy, Jacob D. Biamonte, Victor Bonilla, Dirk Brockmann, Victor Buendia, Seth Bullock, Simon Carrignon, Xubin Chai, Jon Darkow, Luca Dellanna, David Rushing Dewhurst, Peter Dodds, Alan Dorin, Peter Eerens, Christos Ellinad, Diego Espinosa, Ernesto Estrada, Nelson Fernández, Len Fisher, Erin Gallagher, Riccardo Gallotti, Pier Luigi Gentilli, Lasse Gerrits, Nigel Goldenfeld, Sergio Gómez, Héctor Gómez-Escobar, Alfredo González-Espinoza, Marcus Guest, J. W. Helkenberg, Stephan Herminghaus, Enrique Hernández-Zavaleta, Marco A. Javarone, Hang-Hyun Jo, Pedro Jordano, Abbas Karimi, J. Kasmire, Erin Kenzie, Tamer Khraisha, Heetae Kim, Bob Klapetzky, Brennan Klein, Karen Kommerce, Roman Koziol, Erika Legara, Carl Lipo, Oliver Lopez-Corona, Yeu Wen Mak, Vivien Marmelat, Steve McCormack, Dan Mønster, Alfredo Morales, Yamir Moreno, Ronald Nicholson, Enzo Nicosia, Sibout Nooteboom, Dragan Okanovic, Charles R Paez, Julia Poncela C., Francisco Rodrigues, Jorge P. Rodríguez, Iza Romanowska, Pier Luigi Sacco, Joaquín Sanz, Samuel Scarpino, Alice Schwarze, Nasser Sharareh, Keith Malcolm Smith, Ricard Sole, Keith Sonnanburg, Cédric Sueur, Ali Sumner, Michael Szell, Ali Tareq, Adam Timlett, Ignacio Toledo, Leo Torres, Paul van der Cingel, Ben van Lier, Jeffrey Ventrella, Alessandro Vespignani, Joe Wasserman, Kristen Weiss, Daehan Won, Phil Wood, Nicky Zachariou, Mengsen Zhang, Arshi, Brewingsense, Complexity Space Consulting, Raoul, Systems Innovation, The NoDE Lab
+						</p>
+						<p>
+							<strong>Special thanks to Dirk Brockmann for his <a href="http://www.complexity-explorables.org/">Complexity Explorables</a> and to <a href="https://www.linkedin.com/in/serafina-agnello-a0683828/">Serafina Agnello</a> for designing and realizing the booklet.</strong>
+						</p>
+					</header>
+
+					<!-- Gallery  
+						<div class="gallery">
+							<article class="from-left">
+								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
+							</article>
+							<article class="from-left">
+								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
+							</article>
+						</div>
+				-->
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Contacts</h2>
+						<p>
+							<ul>
+								<li><a href="mailto:manlio.dedomenico@gmail.com"><i class="fas fa-envelope" style="font-size:18px;"></i></a>&nbsp;<a href="https://comunelab.fbk.eu/manlio/index.php">Manlio De Domenico</a>, CoMuNe Lab, Fondazione Bruno Kessler, Italy</li>
+								<li><a href="mailto:sayama@binghamton.edu"><i class="fas fa-envelope" style="font-size:18px;"></i></a>&nbsp;<a href="http://harvey.binghamton.edu/~sayama/">Hiroki Sayama</a>, Dept. of Systems Science and Industrial Engineering, Binghamton Univ., NY, USA</li>
+							</ul>	
+						</p>
+					</header>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="https://twitter.com/search?q=%23complexityexplained" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<!--
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+					-->
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; #ComplexityExplained</li><li>Original Design: <a href="https://html5up.net">HTML5 UP</a> and CoMuNe Lab</li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- EXPLORABLES -->
+			<script type="text/javascript">
+				var explorable_states = [];
+			</script>
+			<script type="text/javascript" src="explorables/herd.js"></script>
+			<script type="text/javascript" src="explorables/dla.js"></script>
+			<script type="text/javascript" src="explorables/forrest.js"></script>
+			<script type="text/javascript" src="explorables/grayscott.js"></script>
+			<script type="text/javascript" src="explorables/jujujajaki.js"></script>
+			<script type="text/javascript" src="explorables/double-pendulum.js"></script>
+			<script type="text/javascript" src="explorables/flocking.js"></script>
+	</body>
 </html>
