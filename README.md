@@ -13,7 +13,7 @@ A [booklet in PDF format](https://github.com/complexityexplained/complexityexpla
 
 ### Coordinators
 
-* [Manlio De Domenico](https://comunelab.fbk.eu/manlio/index.php), CoMuNe Lab, Fondazione Bruno Kessler, Italy
+* [Manlio De Domenico](https://comunelab.fbk.eu/manlio/index.php), CoMuNe Lab, University of Padua, Italy
 * [Hiroki Sayama](http://harvey.binghamton.edu/~sayama/), Dept. of Systems Science and Industrial Engineering, Binghamton University, NY, USA
 
 ### Contributors
